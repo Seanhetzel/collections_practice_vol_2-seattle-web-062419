@@ -1,4 +1,5 @@
 # your code goes here
+require "pry"
 def begins_with_r(array)
   array.all? {|element| element.start_with?("r")}
 end
@@ -46,9 +47,10 @@ def organize_schools(school_hash)
   school_hash.each do |school, locations|
     #if locations[:location] == 
     organized_schools[locations[:location]] = school_hash.keys.select{|sh_school| school_hash[school].include?(sh_school)}
+    #binding.pry
   end
   #array.values
   organized_schools
-  #school_hash
+  school_hash
   
 end
